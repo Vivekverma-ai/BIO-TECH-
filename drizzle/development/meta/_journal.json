@@ -15,6 +15,13 @@
       "when": 1788364325598,
       "tag": "0001_freezing_mauler",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1788448067428,
+      "tag": "0002_panoramic_abomination",
+      "breakpoints": true
     }
   ]
 }
