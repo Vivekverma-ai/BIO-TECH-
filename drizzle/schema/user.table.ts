@@ -9,6 +9,7 @@ export const users = pgTable("users", {
   phone: varchar("phone", { length: 50 }),
   role: userRoleEnum("role").default("user").notNull(),
   status: userStatusEnum("status").default("active").notNull(),
+  password: text("password"),
   avatarUrl: text("avatar_url"),
   emailVerifiedAt: timestamp("email_verified_at", { withTimezone: true }),
   createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),

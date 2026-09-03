@@ -84,7 +84,46 @@ export type UserWithRelations = User & {
 
 /**
  * ============================================================================
- * 3. COMMON API & SERVER ACTION RESULT TYPES
+ * 3. AUTHENTICATION & SESSION TYPES
+ * ============================================================================
+ */
+
+export interface SessionPayload {
+  userId: string;
+  email: string;
+  role: string;
+  activeBusinessId?: string | null;
+}
+
+export interface AuthSession {
+  user: User;
+  activeBusiness: Business | null;
+  businesses: Business[];
+}
+
+/**
+ * ============================================================================
+ * 4. PAGINATION & FILTER TYPES
+ * ============================================================================
+ */
+
+export interface PaginationParams {
+  page?: number;
+  pageSize?: number;
+  search?: string;
+}
+
+export interface PaginatedResult<T> {
+  items: T[];
+  total: number;
+  page: number;
+  pageSize: number;
+  totalPages: number;
+}
+
+/**
+ * ============================================================================
+ * 5. COMMON API & SERVER ACTION RESULT TYPES
  * ============================================================================
  */
 
